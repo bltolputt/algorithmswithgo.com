@@ -25,5 +25,16 @@ package module01
 //   Fibonacci(14) => 377
 //
 func Fibonacci(n int) int {
-	return 0
+	if n <= 1 {
+		return n
+	}
+	var fib int
+	n2 := 0
+	n1 := 1
+	for i := 2; i <= n; i++ {
+		fib = n2 + n1
+		n2 = n1
+		n1 = fib
+	}
+	return fib
 }
